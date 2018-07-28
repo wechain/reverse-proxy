@@ -13,6 +13,6 @@ COPY nginx.conf /etc/nginx/nginx.conf
 # RUN chmod a+x certbot-auto
 # RUN certbot-auto --email charlesstover@charlesstover.com --nginx --server https://acme-v02.api.letsencrypt.org/directory
 
-ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
+ENTRYPOINT [ "nginx" ]
 
 EXPOSE 80 443
