@@ -2,8 +2,7 @@
 A reverse proxy for the suite of applications by Charles Stover.
 
 ## Build
-* `build.sh` (Linux) or
-* `sh build.sh` (Windows)
+Run `yarn build`.
 
 ## Tech Stack
 
@@ -11,4 +10,8 @@ A reverse proxy for the suite of applications by Charles Stover.
 
 * Docker - The entire application is built into a Docker image to be deployed to the host server.
 
+* Docker Hub - The build is automated by and pulled from Docker Hub.
+
 * nginx - The reverse proxy itself is powered by nginx.
+
+* yarn - Simply used as a shortcut for scripts.
