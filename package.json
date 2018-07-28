@@ -1,0 +1,15 @@
+{
+  "name": "reverse-proxy",
+  "version": "1.0.0",
+  "author": "Charles Stover <charlesstover@charlesstover.com>",
+  "description": "A reverse proxy for the suite of applications by Charles Stover.",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "https://github.com/CharlesStover/reverse-proxy.git",
+  "scripts": {
+    "build": "sh bin/build.sh",
+    "logs": "docker logs reverse-proxy",
+    "start": "sh bin/start.sh",
+    "stop": "docker stop reverse-proxy && docker rm reverse-proxy"
+  }
+}

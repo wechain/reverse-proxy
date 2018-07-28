@@ -1,15 +1,11 @@
 FROM alpine:latest
 LABEL Author="Charles Stover"
-VOLUME /etc/letsencrypt /etc/letsencrypt
-VOLUME /var/lib/letsencrypt /var/lib/letsencrypt
 
 # nginx
-RUN mkdir -p /run/nginx
 RUN apk update
 RUN apk add nginx
-# RUN rm -rf /etc/nginx/conf.d
-# RUN rm -rf /usr/share/nginx/html/*
-# COPY nginx.conf /etc/nginx/nginx.conf
+RUN rm -rf /etc/nginx/conf.d
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # certbot
 # WORKDIR /opt/certbot

@@ -1,4 +1,6 @@
+/bin/build.sh
+/bin/start.sh
 .dockerignore
-build.sh
 Dockerfile
+package.json
 README.md
