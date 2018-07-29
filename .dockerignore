@@ -1,5 +1,4 @@
-/bin/build.sh
-/bin/start.sh
+/bin
 .dockerignore
 Dockerfile
 package.json

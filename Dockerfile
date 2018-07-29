@@ -5,7 +5,8 @@ LABEL Author="Charles Stover"
 RUN apk update
 RUN apk add nginx
 RUN rm -rf /etc/nginx/conf.d
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY etc/nginx/nginx.conf /etc/nginx/nginx.conf
+COPY etc/nginx/servers.conf /etc/nginx/servers.conf
 
 # certbot
 # WORKDIR /opt/certbot
