@@ -17,7 +17,7 @@ COPY etc/periodic/daily/certbot.sh /etc/periodic/daily/certbot.sh
 
 # Install
 RUN chmod +x /etc/periodic/daily/certbot.sh
-RUN openssl dhparam -dsaparam -out /etc/nginx/dhparam.pem 4096
+RUN openssl dhparam -dsaparam -out /etc/openssl/dhparam.pem 4096
 
 ENTRYPOINT [ "nginx && certbot certonly --domains acealters.com && certbot certonly --domains charlesstover.com && certbot certonly --domains cscdn.net && certbot certonly --domains gamingmedley.com && certbot certonly --domains mtgeni.us && certbot certonly --domains mtgenius.com && certbot certonly --domains quisido.com" ]
 

@@ -4,7 +4,7 @@
   "author": "Charles Stover <charlesstover@charlesstover.com>",
   "description": "A reverse proxy for the suite of applications by Charles Stover.",
   "license": "MIT",
-  "main": "index.js",
+  "main": "bin/start.sh",
   "repository": "https://github.com/CharlesStover/reverse-proxy.git",
   "scripts": {
     "build": "sh bin/build.sh",
