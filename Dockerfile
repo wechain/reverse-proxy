@@ -8,18 +8,18 @@ RUN apk add certbot libressl nginx
 VOLUME /etc/letsencrypt /etc/nginx/conf.d /etc/openssl
 
 # Copy
-COPY src/crontab.txt ./crontab.txt
-COPY src/entrypoint.sh ./entrypoint.sh
 COPY src/etc/letsencrypt/cli.ini /etc/letsencrypt/cli.ini
 COPY src/etc/nginx/nginx.conf /etc/nginx/nginx.conf
+COPY src/home/crontab.txt /home/crontab.txt
+COPY src/home/entrypoint.sh /home/entrypoint.sh
 
 # Install
-RUN /usr/bin/crontab crontab.txt
+RUN /usr/bin/crontab /home/crontab.txt
 
 # Clean Up
-RUN rm -rf crontab.txt
+RUN rm -rf /home/crontab.txt
 
 # Run
-ENTRYPOINT [ "./entrypoint.sh" ]
+ENTRYPOINT [ "/bin/bash", "/home/entrypoint.sh" ]
 
 EXPOSE 80 443
