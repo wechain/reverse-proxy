@@ -9,6 +9,7 @@ RUN apk add bash certbot libressl nginx
 
 # Copy
 COPY src/etc/nginx/nginx.conf /etc/nginx/nginx.conf
+COPY src/home/cert.sh /home/cert
 COPY src/home/crontab.txt /home/crontab.txt
 COPY src/home/dhparam.sh /home/dhparam.sh
 COPY src/home/entrypoint.sh /home/entrypoint.sh
