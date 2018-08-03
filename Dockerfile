@@ -15,6 +15,7 @@ COPY src/home/dhparam.sh /home/dhparam.sh
 COPY src/home/entrypoint.sh /home/entrypoint.sh
 
 # Install
+RUN chmod +x /home/cert
 RUN /usr/bin/crontab /home/crontab.txt
 
 # Clean Up
