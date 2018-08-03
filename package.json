@@ -8,6 +8,7 @@
   "repository": "https://github.com/CharlesStover/reverse-proxy.git",
   "scripts": {
     "build": "sh bin/build.sh",
+    "exec": "docker exec -it reverse-proxy /bin/bash",
     "logs": "docker logs reverse-proxy",
     "start": "sh bin/start.sh",
     "stop": "docker stop reverse-proxy && docker rm reverse-proxy"

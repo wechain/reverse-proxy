@@ -1,5 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
-openssl dhparam -dsaparam -out /etc/openssl/dhparam.pem 4096
+/bin/bash /home/dhparam.sh
+
 nginx
+
 /usr/sbin/crond -f -l 8

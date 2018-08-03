@@ -1,16 +1,16 @@
 FROM alpine:latest
 LABEL Author="Charles Stover"
+WORKDIR /home
 
 # Dependencies
 RUN apk update
 RUN apk upgrade
-RUN apk add certbot libressl nginx
-VOLUME /etc/letsencrypt /etc/nginx/conf.d /etc/openssl
+RUN apk add bash certbot libressl nginx
 
 # Copy
-COPY src/etc/letsencrypt/cli.ini /etc/letsencrypt/cli.ini
 COPY src/etc/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY src/home/crontab.txt /home/crontab.txt
+COPY src/home/dhparam.sh /home/dhparam.sh
 COPY src/home/entrypoint.sh /home/entrypoint.sh
 
 # Install
