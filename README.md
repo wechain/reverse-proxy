@@ -4,6 +4,9 @@ A reverse proxy for the suite of applications by Charles Stover.
 ## Build
 Run `yarn build`.
 
+## Use
+Inside the Docker container, run `./cert domain.com` to generate a certificate for that domain.
+
 ## Tech Stack
 
 * Alpine Linux - The operating system running in the container.
